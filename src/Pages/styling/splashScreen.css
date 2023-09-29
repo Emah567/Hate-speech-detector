@@ -1,0 +1,111 @@
+/* splashScreen.css */
+
+.body {
+    background-image: url("/src/assets/images/image\ \(2\).svg");
+     background-repeat: no-repeat;
+  background-size: cover;
+ 
+  display: flex;
+  justify-content: center;
+  min-width:100vw;
+  min-height: 100vh; /* Adjust the height as needed */
+  align-items: center;
+  place-items: center;
+
+  }
+  
+ 
+  .splashScreen {
+    /* Set the background image */
+    position: relative; /* Add this to make the pseudo-element absolute */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Make the entire viewport height */
+  }
+  
+  #btn {
+    border-radius: 20px;
+    background: #d71e1e;
+    width: 255px;
+    height: 53px;
+    flex-shrink: 0;
+    z-index: 3333;
+
+  }
+  
+  #btn-text {
+    color: #fff;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .futureChat,
+  .futureChatText {
+    color: #fff;
+    font-family: Inter;
+    font-style: normal;
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  .futureChat {
+    font-weight: 600;
+    line-height: 29.05px;
+    font-size: 24px;
+  }
+  .Text{
+    max-width:1000px ;
+
+  }
+  .futureChatText {
+    font-size: 17px;
+    font-weight: 300;
+    text-wrap: wrap;
+
+    line-height: normal;
+  }
+  
+  @media (max-width: 768px) {
+    .splashScreen {
+      margin-top: 252px;
+      margin-left: 43px;
+      margin-right: 55px;
+      margin-bottom: 72px;
+    }
+  
+    .futureChat,
+    .futureChatText {
+      color: #fff;
+      font-family: Inter;
+      font-style: normal;
+      text-align: center; /* Center the text horizontally */
+    }
+  
+    .futureChat {
+        font-weight: 600;
+        line-height: 29.05px;
+      
+        width: 331px;
+        height: 58px;
+        font-size: 17px;
+     
+    }
+  
+    .futureChatText {
+      width: 349px;
+      height: 80px;
+      font-size: 11px;
+      font-weight: 300;
+      line-height: normal;
+      text-wrap: balance;
+      margin-top: 724px;
+      margin-left: 43px;
+      text-align: center; /* Center the text horizontally */
+    }
+  
+  }
+  
