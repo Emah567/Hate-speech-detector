@@ -1,4 +1,174 @@
 body{
     background: #202020;
 }
+@font-face{
+    font-family: Sedan-Regular;
+    src: url("../assetsIcon/Sedan-Regular.woff");
+    }
+    
+
+/* LoginScreen.css */
+.LoginBody {
+  align-items: center;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    height: 100vh; /* Make sure the container takes up the full viewport height */
+  }
+  
+ .link{
+  color: #7B7B7B;
+  font-family: Inter;
+  font-size: 13.991px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+ }
+ 
+.link a 
+{
+  color: white;
+}
+#boxLogin {
+   
+  text-align: center;
+  padding-top: 20px;
+  box-shadow: 2px 1px 9px 11px rgb(45 41 41 / 22%);
+  width: 500px;
+  /* border-width: thin; */
+  /* border-style: solid; */
+  height: 555px;
+  border-style: tsol;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+  .icon:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);}
+  .TextHead {
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+ 
+  .smallText{
+    color: #7B7B7B;
+    font-family: Inter;
+    font-size: 13.991px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .TextHead
+  {
+    color: #F4F4F4;
+    font-family: Sedan;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .Icons, .icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8em;
+    align-items: center;
+    
+  }
+  .icon{
+    width: 61.087px;
+    height: 29.549px;
+    padding-inline: 2px;
+    flex-shrink: 0;
+    margin-inline: 10px;
+  }
+
+.btn:hover{
+
+
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+  }
+.stroke{
+ 
+    /* width: 86px; */
+    /* height: 0px; */
+    flex-shrink: 0;
+    margin-top: 39px;
+    display: flex;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    margin-top: 43px;
+}
+
+.form-group {
+  position: relative;
+  margin-top: 48px;}
+.form-group input {
+    width: 300px;
+    height: 53px;
+    color: white;
+
+    padding-left: 31px;
+    border-style: none;
+    border-radius: 20px;
+    background: #292929;
+}
+.form-group >.InputIcon{
+  position: absolute;
+  top: 18px;
+  left: 75px;
+  
+
+}
+.form-group>input{
+  padding-left: 40px;
+}
+.btn {
+  border-radius: 20px;
+  background: #d71e1e;
+  width: 300px;
+  height: 53px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: Inter;
+  font-size: 13px;
+  border-style: none;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 29px;
+  z-index: 3333;
+
+}
+
+
+@media (max-width: 768px){
+.TextHead{
+    margin-top: 50px;
+}
+.strokeLength{
+    stroke-width: 1px;
+stroke: #878787;
+}
+.input{
+  width: 300px;
+  height: 53px;
+}
+#boxLogin{
+  border-style: none;
+}
+.btn{
+  border-style: none;
+}
+}
 

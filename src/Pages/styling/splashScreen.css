@@ -1,19 +1,39 @@
 /* splashScreen.css */
-
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .body {
-    background-image: url("/src/assets/images/image\ \(2\).svg");
-     background-repeat: no-repeat;
+  background-image: url("/src//assets/images/image\ \(2\).svg");
+  background-repeat: no-repeat;
   background-size: cover;
- 
-  display: flex;
-  justify-content: center;
-  min-width:100vw;
-  min-height: 100vh; /* Adjust the height as needed */
-  align-items: center;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  background-blend-mode: overlay;
+  display: grid;
   place-items: center;
-
-  }
   
+  /* height: 100vh; */
+  text-align: center;
+}
+
+  
+ 
+  /* spinner.css */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #d71e1e;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
  
   .splashScreen {
     /* Set the background image */
@@ -28,9 +48,11 @@
   #btn {
     border-radius: 20px;
     background: #d71e1e;
-    width: 255px;
+    width: 355px;
     height: 53px;
     flex-shrink: 0;
+    border-style: none;
+    margin-top: 29px;
     z-index: 3333;
 
   }
@@ -68,6 +90,10 @@
 
     line-height: normal;
   }
+  #btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
   
   @media (max-width: 768px) {
     .splashScreen {
@@ -75,6 +101,9 @@
       margin-left: 43px;
       margin-right: 55px;
       margin-bottom: 72px;
+    }
+    .body{
+      width: fit-content;
     }
   
     .futureChat,

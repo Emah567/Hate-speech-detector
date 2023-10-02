@@ -7,6 +7,8 @@ import './App.css'
 
 import "aos/dist/aos.css";
 import AOS from "aos";
+import PreLoader from "./Pages/preLoader";
+import RegisterScreen from "./Pages/styling/RegisterScreen";
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000, delay: 0 });
@@ -15,8 +17,10 @@ function App() {
     <>
     <Router>
     <Routes>
-      <Route path="/" element={<SplashScreen/>} />
+      <Route path="/" element={<PreLoader/>} />
+      <Route path="/SplashScreen" element={<SplashScreen/>} />
       <Route path="/LoginScreen" element={<LoginScreen/>} />
+      <Route path="/SignUpScreen" element={<RegisterScreen/>} />
      
     </Routes>
   </Router>
