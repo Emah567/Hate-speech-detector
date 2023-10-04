@@ -14,16 +14,16 @@ function PreLoader() {
   }, []);
   return (
     <>
-    {!showLoader ? (<div className="loader">
-<div className="loader1">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    {!showLoader ? (
+    <div className="bodyes"><div class="content">
+	<div class="circle"></div>
+	<div class="circle"></div>
+	<div class="circle"></div>
+	<div class="circle"></div>
+</div>
 </div>
      
-    </div>) :<SplashScreen/> }
+    ) :<SplashScreen/> }
     
       
     </>

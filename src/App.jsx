@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import PreLoader from "./Pages/preLoader";
 import RegisterScreen from "./Pages/styling/RegisterScreen";
+import ChatScreen from "./Pages/ChatScreen";
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000, delay: 0 });
@@ -21,6 +22,7 @@ function App() {
       <Route path="/SplashScreen" element={<SplashScreen/>} />
       <Route path="/LoginScreen" element={<LoginScreen/>} />
       <Route path="/SignUpScreen" element={<RegisterScreen/>} />
+      <Route path="/ChatScreen" element={<ChatScreen/>} />
      
     </Routes>
   </Router>

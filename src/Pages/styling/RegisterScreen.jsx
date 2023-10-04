@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from "react"
 import "../styling/LoginScreen.css"
 import { Link } from "react-router-dom";
+import { UserAuth } from "../../assets/contextAPI/contextApi";
 function SignUp() {
     // update email and password form data
     const [form, setform] = useState({
@@ -58,13 +59,15 @@ function handlechange(event) {
         <div className="form">
           <form action="">
           <div class="form-group">
+   
             <input type="text" id="username" name="username"  placeholder="Enter your username" onChange={handlechange} value={form.username}required/>
             </div>
           <div class="form-group">
+      
                 <input type="text" id="email" name="email"  placeholder="Enter your email " onChange={handlechange} value={form.email}required/>
             </div>
             <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="Enter your password"    onChange={handlechange}
+     <input type="password" id="password" name="password" placeholder="Enter your password"    onChange={handlechange}
               value={form.password} required/>
             </div>
             <button type="submit" className="btn">SignUp</button>

@@ -16,17 +16,23 @@ body{
   }
   
  .link{
-  color: #7B7B7B;
+  color: #FFF;
   font-family: Inter;
-  font-size: 13.991px;
+  font-size: 10.471px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   line-height: normal;
+  margin-top: 100px;
  }
  
 .link a 
 {
-  color: white;
+  color: #D71E1E;
+  font-family: Inter;
+  font-size: 10.471px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 #boxLogin {
    
@@ -123,15 +129,33 @@ form{
     border-radius: 20px;
     background: #292929;
 }
-.form-group >.InputIcon{
-  position: absolute;
-  top: 18px;
-  left: 75px;
+#username{
   
+    border-color: #d71e1e;
+    padding-left: 39px;
+    background-image: url("/src/assets/images/vector.svg");
+    background-repeat: no-repeat;
+    background-size: 37px 13px;
+    background-position: left center;
+  
+}
+#email{
+ 
+    border-color: #d71e1e;
+    padding-left: 39px;
+    background-image: url("/src/assets/images/mdi-email.svg");
+    background-repeat: no-repeat;
+    background-size: 37px 13px;
+    background-position: left center;
 
 }
-.form-group>input{
-  padding-left: 40px;
+#password{
+  border-color: #d71e1e;
+  padding-left: 39px;
+  background-image: url("/src/assets/images/vector.svg");
+  background-repeat: no-repeat;
+  background-size: 37px 13px;
+  background-position: left center;
 }
 .btn {
   border-radius: 20px;
