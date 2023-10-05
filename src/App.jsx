@@ -10,12 +10,14 @@ import AOS from "aos";
 import PreLoader from "./Pages/preLoader";
 import RegisterScreen from "./Pages/styling/RegisterScreen";
 import ChatScreen from "./Pages/ChatScreen";
+import Autcontextprovider from "./assets/contextAPI/contextApi";
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000, delay: 0 });
   }, []);
   return (
     <>
+    <Autcontextprovider>
     <Router>
     <Routes>
       <Route path="/" element={<PreLoader/>} />
@@ -27,7 +29,7 @@ function App() {
     </Routes>
   </Router>
 
-     
+  </Autcontextprovider>
     </>
   )
 }

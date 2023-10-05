@@ -1,13 +1,32 @@
 import React, { useEffect,useState } from "react"
 import "../Pages/styling/LoginScreen.css"
 import { Link } from "react-router-dom";
+import { UserAuth } from "../assets/contextAPI/contextApi";
+import { useNavigate } from "react-router-dom";
 function LoginScreen() {
     // update email and password form data
     const [form, setform] = useState({
-      username: "",
+      email: "",
       password: "",
     });
-    
+    const { logIn } = UserAuth();
+    const [loading, setLoading] = useState(false); // To track loading state
+    const [error, setError] = useState(null); // To track error state
+   let navigate=useNavigate()
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      setLoading(true);
+      setError(null);
+      try {
+        await logIn(form.email, form.password);
+        setLoading(false)
+        navigate("/ChatScreen");
+      } catch (error) {
+        setLoading(false);
+  
+        // Set the error state to display an alert
+        setError(" failed. Please try again.")     }
+    };
 function handlechange(event) {
     const { name, value } = event.target;
     setform((p) => {
@@ -55,18 +74,22 @@ function handlechange(event) {
   <path d="M0 1H86" stroke="#878787"/>
 </svg></div>
 </div>
-        <div className="form">
-          <form action="">
+        <div className="form" >
+          <form action=" " onSubmit={handleSubmit}>
           <div class="form-group">
-       <input type="text" id="username" name="username"  placeholder="Enter your email " onChange={handlechange} value={form.username}required/>
+       <input type="text" id="email" name="email"  placeholder="Enter your email " onChange={handlechange} value={form.email}required/>
             </div>
             <div class="form-group">
       
                 <input type="password" id="password" name="password" placeholder="Enter your password"    onChange={handlechange}
               value={form.password} required/>
             </div>
-            <button type="submit" className="btn">Login</button>
-          </form>
+            {error && <div className="error-alert">{error}</div>}
+            {loading ? (
+            <div className="spinnerLogin"></div>
+          ) :(
+            <button type="submit" className="btn">SignUp</button>)}
+         </form>
         </div>
         <div className="link">
         Don’t Have Account?   <Link to="/SignUpScreen">  Sign Up</Link>

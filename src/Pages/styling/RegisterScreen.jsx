@@ -1,14 +1,60 @@
 import React, { useEffect,useState } from "react"
 import "../styling/LoginScreen.css"
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { db } from "../../assets/contextAPI/firebasejsx";
 import { UserAuth } from "../../assets/contextAPI/contextApi";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  addDoc,
+  doc,
+  getDoc,
+} from "firebase/firestore";
 function SignUp() {
     // update email and password form data
+    const {  signUp} = UserAuth();
+    const [loading, setLoading] = useState(false); // To track loading state
+    const [error, setError] = useState(null); // To track error state
+  let navigate=useNavigate()
+  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+    setLoading(true);
+    setError(null);
+      try {
+        await signUp(form.email, form.password);
+        
+    // Add user data to the Firestore "users" collection
+
+    const docRef = await addDoc(collection(db, "users"), { // db is your Firestore instance
+      username: form.username,
+      email: form.email,
+      password: form.password,
+    });
+        setLoading(false)
+        navigate("/ChatScreen");
+      } catch (error) {
+        setLoading(false);
+  console.log(error)
+        // Set the error state to display an alert
+        setError(" failed. Please try again.") 
+      }
+    };
     const [form, setform] = useState({
       username: "",
       email:"",
       password: "",
     });
+    //storing user data 
+  
+   
+ 
+
+
+
 function handlechange(event) {
     const { name, value } = event.target;
     setform((p) => {
@@ -57,7 +103,7 @@ function handlechange(event) {
 </svg></div>
 </div>
         <div className="form">
-          <form action="">
+          <form action="" onSubmit={handleSubmit}>
           <div class="form-group">
    
             <input type="text" id="username" name="username"  placeholder="Enter your username" onChange={handlechange} value={form.username}required/>
@@ -70,7 +116,11 @@ function handlechange(event) {
      <input type="password" id="password" name="password" placeholder="Enter your password"    onChange={handlechange}
               value={form.password} required/>
             </div>
-            <button type="submit" className="btn">SignUp</button>
+            {error && <div className="error-alert">{error}</div>}
+            {loading ? (
+            <div className="spinnerLogin"></div>
+          ) :(
+            <button type="submit" className="btn">SignUp</button>)}
           </form>
         </div>
         <div className="link">
