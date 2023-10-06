@@ -21,7 +21,7 @@ function ChatScreen() {
   const [inputMessage, setInputMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [allUserMessages, setAllUserMessages] = useState({}); //get all chat related to the users
+  const [allUserMessages, setAllUserMessages] = useState([]); //get all chat related to the users
   const [username, setUsername] = useState(""); // State to store the username
 
   
@@ -31,7 +31,6 @@ function ChatScreen() {
     if (inputMessage.trim() !== "") {
       const newMessage = {
         text: inputMessage,
-        sender: "user",
       };
   
       // Add the new message to the messages array
@@ -65,56 +64,7 @@ function ChatScreen() {
   };
   
   // Function to load messages when the component mounts
-  useEffect(() => {
-    const loadAllUserMessages = async () => {
-        if (user) {
-        // Query Firestore for the user's data based on their email
-        const userRef = doc(db, "users", user?.email);
-        
-        try {
-          const userDoc = await getDoc(userRef);
-          if (userDoc.exists()) {
-            const userData = userDoc.data();
-            setUsername(userData.username); // Set the username state
-          }
-
-          // ... your existing code for loading messages ...
-        } catch (error) {
-          console.error("Error:", error);
-        }
-      }
-      if (user) {
-        // Query Firestore for all messages
-        const messagesRef = collection(db, "messages");
-  
-        try {
-          const querySnapshot = await getDocs(messagesRef);
-          const allMessages = {};
-  
-          querySnapshot.forEach((doc) => {
-            const messageData = doc.data();
-            const userEmail = messageData.sender;
-  
-            if (!allMessages[userEmail]) {
-              allMessages[userEmail] = [];
-            }
-  
-            allMessages[userEmail].push(messageData);
-          });
-  
-          setAllUserMessages(allMessages);
-          setLoading(false);
-        } catch (error) {
-          console.error("Error:", error);
-        }
-      }
-    };
-  
-    // Load all user messages
-    loadAllUserMessages();
-  }, [user]);
-  
-
+ 
   useEffect(() => {
     const loadModel = async () => {
       // Loading model
@@ -138,7 +88,8 @@ function ChatScreen() {
     </div>
     <div className="chat">
     <div className="chatBox2"> 
-    <p>   "Hello {user?.email}, you're welcome to use our progressive web app to detect hate speech. Kindly understand what hate speech is, as it is targeted at a particular audience." </p> </div>
+    <p>    </p> </div>
+       
         {messages.map((message, index) => (
            <ChatMessage indexes={index} message={message} model={model} />
         ))}
