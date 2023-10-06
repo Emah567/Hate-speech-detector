@@ -4,7 +4,8 @@ import "./styling/ChatSpinner.css"
 function Spinner() {
   return (
     <>
-              <div className="spinnerss"> <div className="spinners"></div>           
+              <div className="spinnerss"> <div className="spinners"></div>       
+              Loading Model ...    
 </div>
 
     </>

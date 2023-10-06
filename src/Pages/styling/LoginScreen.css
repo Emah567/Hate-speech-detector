@@ -45,7 +45,7 @@ body{
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-top: 100px;
+  padding-top: 20px;
  }
  
 .link a 
@@ -200,9 +200,7 @@ form{
 
 
 @media (max-width: 768px){
-.TextHead{
-    margin-top: 50px;
-}
+
 .strokeLength{
     stroke-width: 1px;
 stroke: #878787;

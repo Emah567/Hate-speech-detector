@@ -10,10 +10,13 @@
 
 }
 .spinnerss {
-display:flex;
-align-items: center;
-justify-items: center;
-padding-top: 50%;
 
+display: flex;
+    align-items: center;
+    padding-top: 20px;
+    color: white;
+    justify-items: center;
+    padding-top: 50%;
+    flex-direction: column;
 
 }

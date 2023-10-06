@@ -88,7 +88,7 @@ function handlechange(event) {
             {loading ? (
             <div className="spinnerLogin"></div>
           ) :(
-            <button type="submit" className="btn">SignUp</button>)}
+            <button type="submit" className="btn">LogIn</button>)}
          </form>
         </div>
         <div className="link">

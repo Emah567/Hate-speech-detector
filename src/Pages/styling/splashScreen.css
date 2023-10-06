@@ -5,14 +5,13 @@
   box-sizing: border-box;
 }
 .body {
-  background-image: url("/src//assets/images/image\ \(2\).svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: hsla(0, 0%, 0%, 0.7);
   background-blend-mode: overlay;
   display: grid;
   place-items: center;
-  
+  background-image: url('../assetsIcon/splash.svg');
   /* height: 100vh; */
   text-align: center;
 }
@@ -97,13 +96,18 @@
   
   @media (max-width: 768px) {
     .splashScreen {
-      margin-top: 252px;
-      margin-left: 43px;
-      margin-right: 55px;
-      margin-bottom: 72px;
+      display: flex;
+      /* margin-bottom: 72px; */
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
     }
     .body{
       width: fit-content;
+    }
+    #btn{
+      width: 200px;
     }
   
     .futureChat,

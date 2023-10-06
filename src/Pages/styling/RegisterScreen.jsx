@@ -104,10 +104,7 @@ function handlechange(event) {
 </div>
         <div className="form">
           <form action="" onSubmit={handleSubmit}>
-          <div class="form-group">
-   
-            <input type="text" id="username" name="username"  placeholder="Enter your username" onChange={handlechange} value={form.username}required/>
-            </div>
+        
           <div class="form-group">
       
                 <input type="text" id="email" name="email"  placeholder="Enter your email " onChange={handlechange} value={form.email}required/>

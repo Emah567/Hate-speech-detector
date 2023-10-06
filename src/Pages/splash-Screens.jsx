@@ -1,7 +1,6 @@
 import React, { useEffect,useState} from "react"
 import "./styling/splashScreen.css"
 import { Link } from "react-router-dom"
-import Images from "..//assets/images/image (2).svg"
 function SplashScreen() {
   const [loading, setLoading] = useState(false); // To track loading state
 
