@@ -67,7 +67,7 @@ function handlechange(event) {
       <div className="LoginBody">
         <div id="boxLogin">
           <div className="boxtext"></div>
-          <h1 className="TextHead">ChatAI
+          <h1 className="TextHead">ChatGuardian
           <p className="smallText">Please Signup</p>
 </h1>
 <div className="Icons">

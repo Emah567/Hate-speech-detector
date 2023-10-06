@@ -32,8 +32,11 @@ With AI Technology
         </span>
         <br />
         <span className="futureChatText" data-aos="fade-in">
-        "The future of chat is here with AI technology" implies that the integration of AI into chat technology is already happening and that it's an exciting development for the way we communicate.
-AI-powered chatbots are becoming increasingly sophisticated and are able to understand and respond to natural language,
+      
+
+We're committed to maintaining a respectful and safe environment for everyone in this chat. Our Hate Speech Checker is here to help ensure that conversations remain free from hate speech and offensive content. It works silently in the background to identify and address any potentially harmful messages.
+
+Feel free to chat with confidence, knowing that we take the well-being of our users seriously. If you have any questions or concerns, please don't hesitate to reach out. Enjoy your conversation!"
         </span>
     </div>
     <Link to="/SignUpScreen">
