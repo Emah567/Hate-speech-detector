@@ -88,7 +88,7 @@ function ChatScreen() {
     </div>
     <div className="chat">
     <div className="chatBox2"> 
-    <p>  Hello {user?.email}  You're welcome to use our prrogressive web app to detect hate speech .Kindly understand whwat hate speech is, as it is  targeted at a particular audience </p> </div>
+    <p>  Hello {user?.email}  You're welcome to use our prrogressive web app to detect offensive speech .Kindly understand whwat hate speech is, as it is  targeted at a particular audience </p> </div>
        
         {messages.map((message, index) => (
            <ChatMessage indexes={index} message={message} model={model} />
