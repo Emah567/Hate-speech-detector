@@ -7,7 +7,7 @@ body{
     }
     /* CSS for Error Message */
 .error-alert {
-  background-color: #ff6b6b; /* Background color for the error message */
+  background-color: rgb(244, 74, 74); /* Background color for the error message */
   color: white; /* Text color for the error message */
   padding: 10px 20px; /* Padding around the error message */
   border-radius: 4px; /* Rounded corners */
@@ -50,7 +50,7 @@ body{
  
 .link a 
 {
-  color: #D71E1E;
+  color: rgb(244, 74, 74);
   font-family: Inter;
   font-size: 10.471px;
   font-style: normal;
@@ -154,7 +154,7 @@ form{
 }
 #username{
   
-    border-color: #d71e1e;
+    border-color: rgb(244, 74, 74);
     padding-left: 39px;
     background-image: url("/src/assets/images/vector.svg");
     background-repeat: no-repeat; 
@@ -182,7 +182,7 @@ form{
 }
 .btn {
   border-radius: 20px;
-  background: #d71e1e;
+  background: rgb(244, 74, 74);
   width: 300px;
   height: 53px;
   flex-shrink: 0;

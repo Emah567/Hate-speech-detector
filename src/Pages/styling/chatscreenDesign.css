@@ -30,7 +30,7 @@ line-height: normal;
   justify-content: center;
   margin:30px 22px;
   border-radius: 15px 15px 15px 0px;
-  background: #D71E1E;
+  background: rgb(244, 74, 74);
   padding: 10px;
   flex-wrap: wrap;
 }
@@ -133,8 +133,8 @@ line-height: 17px; /* 121.506% */
     height: 54px;
     transform: rotate(-28.831deg);
     flex-shrink: 0;
-    background-color: #D71E1E;
-    fill: #D71E1E;
+    background-color: rgb(244, 74, 74);
+    fill: rgb(244, 74, 74);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -166,7 +166,7 @@ line-height: 17px; /* 121.506% */
     justify-content: center;
     margin:30px 22px;
     border-radius: 15px 15px 15px 0px;
-    background: #D71E1E;
+    background: rgb(244, 74, 74);
     padding-left: 10px;
     flex-wrap: wrap;
     }
@@ -260,8 +260,8 @@ line-height: 17px; /* 121.506% */
         height: 34px;
         transform: rotate(-28.831deg);
         flex-shrink: 0;
-        background-color: #D71E1E;
-        fill: #D71E1E;
+        background-color: rgb(244, 74, 74);
+        fill:rgb(244, 74, 74);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -271,3 +271,4 @@ line-height: 17px; /* 121.506% */
       }
      
   }
+

@@ -1,10 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect,useState} from "react"
 import "./styling/splashScreen.css"
+import Spline from '@splinetool/react-spline';
 import { Link } from "react-router-dom"
 function SplashScreen() {
   const [loading, setLoading] = useState(false); // To track loading state
 
   // Function to handle the button click
+  // eslint-disable-next-line no-unused-vars
   const handleButtonClick = () => {
     setLoading(true); // Set loading state to true when the button is clicked
 
@@ -17,43 +20,54 @@ function SplashScreen() {
     }, 2000); // Simulated loading time (2 seconds)
   };
 
+  
+
   return (
     <>
-    <div className="body">
-   
-    <div className="splashScreen">
-      <div className="Text">
-        <span className="futureChat" data-aos="zoom-in">
-        The Future of Chat is Here
-      With AI Technology
-        
-       
-        </span>
-        <br />
-        <span className="futureChatText" data-aos="fade-in">
-      
+<div className="body">
+<Spline className="Spline" scene="https://prod.spline.design/qkruWhkMnFzVRAmu/scene.splinecode" />
 
-We're committed to maintaining a respectful and safe environment for everyone in this chat. Our offensive  Speech Checker is here to help ensure that conversations remain free from offensive content. It works silently in the background to identify and address any potentially harmful messages.
 
-Feel free to chat with confidence, knowing that we take the well-being of our users seriously. If you have any questions or concerns, please don't hesitate to reach out. Enjoy your conversation!"
-        </span>
-    </div>
-    <Link to="/SignUpScreen">
+<Link to="/SignUpScreen">
 
-    <button id="btn">
-      <span id="btn-text">
-      Get Started
+<button id="btn" className="shadow__btn">
+  <span id="btn-text">
+  Get Started
+  </span>
+</button>
+</Link>
 
-      </span>
-    
-    </button>
-    
-    </Link>
-    </div>
-   </div>
-   
+<div className="text">
+<div className="container">
+    <div className="circle-text"></div>
+    <p>Detecting Hate Speech: Chat AI's Top Priority.</p>
+  </div>
+  <div className="container">
+    <div className="circle-text"></div>
+    <p>Chat AI: Your Shield Against Online Hate Speech.</p>
+  </div>
+  <div className="container">
+    <div className="circle-text"></div>
+    <p>Promote Positivity and Combat Online Hate.</p>
+  </div>
+  <div className="container">
+    <div className="circle-text"></div>
+    <p>Safe, Secure, and Anonymous.</p>
+  </div>
+
+</div>
+
+</div>
+  
+
+  
     </>
   )
 }
 
 export default SplashScreen
+
+
+
+
+
