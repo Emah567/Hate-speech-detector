@@ -8,7 +8,7 @@ function PreLoader() {
     // Simulate a delay to demonstrate the loader
     const timer = setTimeout(() => {
       setShowLoader(true);
-    }, 4000);
+    }, 7000);
 
     return () => clearTimeout(timer);
   }, []);
