@@ -97,6 +97,7 @@ background-position: center center;
 
     .body{
       background-image: url('../images/skeleton-img2.png');
+        background-position: top;
     }
 
 }
@@ -105,6 +106,7 @@ background-position: center center;
 
   .body{
     background-image: url('../images/skeleton-img3.png');
+      background-position: top;
   }
 
   .text{    
