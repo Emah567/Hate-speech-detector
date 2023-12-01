@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React, { useEffect,useState} from "react"
 import "./styling/splashScreen.css"
@@ -38,23 +39,7 @@ function SplashScreen() {
 </Link>
 
 <div className="text">
-<div className="container">
-    <div className="circle-text"></div>
-    <p>Detecting Hate Speech: Chat AI's Top Priority.</p>
-  </div>
-  <div className="container">
-    <div className="circle-text"></div>
-    <p>Chat AI: Your Shield Against Online Hate Speech.</p>
-  </div>
-  <div className="container">
-    <div className="circle-text"></div>
-    <p>Promote Positivity and Combat Online Hate.</p>
-  </div>
-  <div className="container">
-    <div className="circle-text"></div>
-    <p>Safe, Secure, and Anonymous.</p>
-  </div>
-
+<p>Detecting Hate Speech: Chat AI's Top Priority.</p>
 </div>
 
 </div>
