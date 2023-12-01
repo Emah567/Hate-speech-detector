@@ -69,23 +69,17 @@ background-position: center center;
   top: 30%;
   left: 78%;
   transform: translate(-50%, -50%);
-  background-color: #333;
+  background-color: #0feee6;
   padding: 2% 3%;
+  width: 21rem;
+  border-radius: 5px;
 }
-  .container {
-    border-left: 2px solid #2375b3;
-    padding-left: 20px; 
-    position: relative;
-  }
 
-  
-  .container p{
-    color: #9c9898;
-    margin: 0%;
-    font-size: 0.85rem;
-    font-weight: 551;
-    margin-top: 5px;
-  }
+.text p{
+  font-weight: 511;
+  color: rgb(94, 67, 83);
+}
+
   @media (max-width: 999px){
     .shadow__btn{
       position: absolute;
@@ -97,7 +91,12 @@ background-position: center center;
 
     .body{
       background-image: url('../images/skeleton-img2.png');
-        background-position: top;
+    }
+
+    .text{
+      top: 55vh;
+      width: 18rem;
+      left: 69%;
     }
 
 }
@@ -106,15 +105,18 @@ background-position: center center;
 
   .body{
     background-image: url('../images/skeleton-img3.png');
-      background-position: top;
   }
 
   .text{    
-    position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 1rem;
 } 
+
+.text p{
+  text-align: center;
+
+}
 
 .container p{
   text-align: center;
